@@ -1,0 +1,458 @@
+body {
+    margin: 0px;
+}
+
+h1 {
+    font-family: "Oswald", sans-serif;
+    color: #1c4587;
+    line-height: 120%;
+}
+
+p {
+    font-family: "Lato", sans-serif;
+    color: black;
+}
+
+h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: 3vw;
+}
+
+h3 {
+    position: relative;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 2.75vw;
+    color: #1c4587;
+}
+
+h4 {
+    position: relative;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    color: black;
+    font-size: 1.5vw;
+    font-weight: 400;
+}
+
+div.section1 {
+    aspect-ratio: 7952/4850;
+    width: 100%;
+    overflow: hidden;
+    height: 0vw;
+}
+
+.section1 h1 {
+    font-size: 4.25vw;
+    position: absolute;
+    top: 6vw;
+    left: 47vw;
+}
+
+.section1 p {
+    z-index: 2;
+    font-size: 1.75vw;
+    position: absolute;
+    top: 19.25vw;
+    left: 47.5vw;
+}
+
+.section1 img {
+    position: absolute;
+    width: 100%;
+}
+
+#indexArrow {
+    position: absolute;
+    width: 5%;
+    left: 47.5%;
+    top: 48vw;
+}
+
+div.section2 {
+    width: 100%;
+    position: relative;
+    top: 60vw;
+}
+
+.subsequent-header {
+    font-weight: 400;
+    margin-left: 2vw;
+    font-size: 4vw;
+}
+
+.section2 h1 {
+    position: relative;
+}
+
+.section2 img {
+    position: relative;
+    top: -6.6vw;
+    right: 0.75vw;
+    width: 30vw;
+    float: right;
+    margin-right: 2vw;
+    border: 0.5vw solid black;
+    background-color: #98b2d0;
+}
+
+@media screen and (max-width: 430px) {
+    .section2 p {
+        width: 60vw;
+        float: left;
+        color: black;
+        margin-left: 2vw;
+        position: relative;
+        text-align: justify;
+        font-size: 1.5vw;
+    }
+}
+
+@media screen and (min-width: 431px) {
+    .section2 p {
+        width: 60vw;
+        float: left;
+        color: black;
+        margin-left: 2vw;
+        position: relative;
+        text-align: justify;
+        font-size: 1.575vw;
+    }
+}
+
+div.section3 {
+    width: 100%;
+    position: absolute;
+    top: 98vw;
+}
+
+.toggler {
+    z-index: 2;
+    height: 2vw;
+    width: 4vw;
+    position: absolute;
+    top: 3vw;
+    left: 2vw;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4vw;
+    width: 4vw;
+    padding: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger > div {
+    position: relative;
+    top: 0;
+    left: 0;
+    background: #1c4587;
+    height: 2px;
+    width: 60%;
+    transition: all  1s ease;
+}
+
+.hamburger > div::before,
+.hamburger > div::after{
+    content: '';
+    position: absolute;
+    top: -0.75vw;
+    background: #1c4587;
+    width: 100%;
+    height: 2px;
+    transition: all  0.4s ease;
+}
+
+.hamburger > div::after{
+    top: 0.75vw;
+}
+
+.toggler:checked + .hamburger > div{
+    background: rgba(0,0,0,0);
+}
+
+.toggler:checked + .hamburger > div::before{
+    top: 0;
+    transform: rotate(45deg);
+    background: #1c4587;
+}
+
+.toggler:checked + .hamburger > div::after{
+    top: 0;
+    transform: rotate(135deg);
+    background: #1c4587;
+}
+
+.menu {
+    background: white;
+    width: 100%;
+    height: 10vh;
+    z-index: 7;
+    transition: all 1s ease;
+}
+
+.toggler:checked ~ .menu{
+    width: 30%;
+}
+
+.menu >  div > ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 4.25vw;
+    padding-left: 2.9vw;
+  
+    visibility: hidden;
+}
+
+.menu > div > ul > li{
+    list-style: none;
+    padding: 0.125vw;
+}
+
+.menu > div > ul > li > a{
+    color: #1c4587;
+    text-decoration: none;
+    font-size: 1.9vw;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+}
+
+.toggler:checked ~ .menu > div > ul{
+    transition: visibility 1s ease;
+    transition-delay: 0.1s;
+    visibility: visible;
+}
+
+.toggler:checked ~ .menu > div > ul > li > a:hover{
+    color: black;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    height: 16vw;
+    background-color: #1c4587;
+    text-align: center;
+    margin: 0vw;
+    padding: 0vw;
+    border: 0vw;
+}
+
+#indexFooter {
+    top: 127vw;
+}
+
+footer p {
+    position: relative;
+    font-size: 1.4vw;
+    color: white;
+}
+
+#name-footer {
+    font-size: 2vw;
+    line-height: 5.5vw;
+}
+
+footer a:active, footer a:visited, footer a:link, footer a:hover {
+    color: white;
+}
+
+footer a {
+    position: relative;
+}
+
+footer img {
+    position: relative;
+    width: 3.5vw;
+    top: -0.9vw;
+}
+
+div.titleArrow {
+    position: absolute;
+    width: 100%;
+}
+
+#subpageTitles {
+    position: relative;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    top: 1.6vw;
+    font-size: 4vw;
+    font-weight: 400;
+    width: 100%;
+    height: auto;
+}
+
+#firstArrow {
+    position: relative;
+    width: 5%;
+    left: 47.5%;
+    top: 3vw;
+}
+
+div.doneWantToDo {
+    width: 100%;
+    position: absolute;
+    top: 10vw;
+    font-size: 0;
+}
+
+.doneWantToDo h2 {
+    position: relative;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    color: black;
+}
+
+.doneWantToDo img {
+    width: 33.33%;
+    position: relative;
+    top: 3.2vw;
+}
+
+div.bottomImages {
+    position: relative;
+}
+
+#portfolio, #futurePlans {
+    top: 1.6vw;
+}
+
+.leftContent {
+    float: left;
+}
+
+.middleContent {
+    text-align: center;
+}
+
+.rightContent {
+    float: right;
+}
+
+#secondArrow {
+    position: relative;
+    width: 5%;
+    left: 47.5%;
+    top: 5.75vw;
+}
+
+#awardsAchievements {
+    top: 6.75vw;
+}
+
+.doneWantToDo table {
+    position: relative;
+    background-color: white;
+    top: 9vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+    border-collapse: collapse;
+    margin-bottom: 1vw;
+    padding-bottom: 1vw;
+}
+
+.doneWantToDo th, td {
+    font-family: "Lato", sans-serif;
+    font-size: 1.575vw;
+    color: black;
+    border: 0.25vw solid black;
+    text-align: center;
+}
+
+.doneWantToDo td {
+    height: 3.75vw;
+}
+
+.doneWantToDo th {
+    background-color: #98b2d0;
+}
+
+.outside-bullet {
+    padding-left: 0vw;
+    margin: 0vw;
+    color: #98b2d0;
+}
+
+.no-bullet {
+    list-style: none;
+    margin: 1.6vw 0vw 1.5vw 0vw;
+    padding: 0vw;
+}
+
+tr:hover {
+    background-color: mintcream;
+}
+
+#workWithMe {
+    top: 10.25vw;
+}
+
+#contactMe {
+    top: 8.5vw;
+}
+
+#learnMore {
+    top: 8.5vw;
+}
+
+#otherPages {
+    top: 6.75vw;
+}
+
+.doneWantToDo a:active, .doneWantToDo a:visited,
+.doneWantToDo a:link, .whatIWantToDo a:active, .whatIWantToDo a:visited, .whatIWantToDo:link
+.section3 a:active, .section3 a:visited,
+.section3 a:link {
+    color: black;
+}
+
+#doneFooter {
+    top: 171.5vw;
+}
+
+div.slideShow {
+    position: absolute;
+    width: 100%;
+    padding-top: 56.2500%;
+    box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16);
+    margin-top: 0vw;
+    overflow: hidden;
+    will-change: transform;
+    top: 17.625vw;
+}
+
+.slideShow iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+div.whatIWantToDo {
+    width: 100%;
+    position: absolute;
+    top: 70vw;
+}
+
+#toDoFooter {
+    top: 97vw;
+}
